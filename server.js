@@ -30,11 +30,6 @@ app.post("/send-temperature-pressure", async (req, res) => {
   res.status(200).json({ message: "success" });
 });
 
-app.get("/", (req, res) => {
-  const data = JSON.parse(fs.readFileSync("./data.json"));
-  console.log(data);
-  res.status(200).json(data);
-});
 
 app.all("*", (req, res) => {
   res.status(404).json({ message: "Invalid Route" });
