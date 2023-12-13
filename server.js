@@ -17,7 +17,6 @@ app.use(cors());
 
 app.post("/send-temperature-pressure", async (req, res) => {
   console.log("request recived");
-  console.log(req.body);
   const { temperature, email, threshold, pressure } = req.body;
 
   const newData = { temperature, pressure };
