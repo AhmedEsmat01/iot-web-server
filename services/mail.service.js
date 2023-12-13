@@ -20,9 +20,7 @@ const transporterConfig = {
 export const sendEmail = async (mailOptions) => {
   // create transporter
   const transporter = nodemailer.createTransport(transporterConfig);
-  console.log(mailOptions);
 
-  console.log(transporterConfig);
   // send email
   await transporter.sendMail(mailOptions);
 };
